@@ -80,7 +80,7 @@ CREATE TABLE `tbl_produto` (
   `status_prod` tinyint(1) DEFAULT '0',
   `img_prod` varchar(120) DEFAULT NULL,
   PRIMARY KEY (`cod_prod`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -89,8 +89,35 @@ CREATE TABLE `tbl_produto` (
 
 LOCK TABLES `tbl_produto` WRITE;
 /*!40000 ALTER TABLE `tbl_produto` DISABLE KEYS */;
-INSERT INTO `tbl_produto` VALUES (1,'Gabinete Master Supremo',10.00,'asd',1,'b3ce584ce593cc8d09959685c40dcfd4.jpg'),(2,'asd',10.00,'asd',1,'97989_5_1534280226_g.jpg'),(3,'The Witcher',10.00,'teste ',1,'headphone-bluetooth-com-microfone-jbl-tune-500bt-photo780322340-12-7-33.jpg'),(4,'Lingerie',35.00,'Lingerie',1,'ac_gabineteGamer.jpeg'),(5,'Gabinete Master Supremo',10.00,'asd',1,'ac_mouse.jpeg'),(6,'Joguinho Kirby\'s',10.00,'asd',0,'ac_headset.jpeg'),(7,'asd',10.00,'asd',1,'headphone-bluetooth-com-microfone-jbl-tune-500bt-photo780322340-12-7-33.jpg'),(8,'Gabinete Master Supremo',10.00,'qwe',1,'97989_5_1534280226_g.jpg'),(9,'Gabinete Master Supremo',10.00,'asd',1,'b3ce584ce593cc8d09959685c40dcfd4.jpg'),(10,'Gabinete Master Supremo',10.00,'asd',1,'ac_gabineteGamer.jpeg'),(11,'Lingerie',35.00,'Lingerie',1,'98391_3_1537277080_g.jpg'),(12,'Gabinete Master Supremo',10.00,'asd',1,'97989_5_1534280226_g.jpg'),(13,'Gabinete Master Supremo',10.00,'asd',1,'458651.jpg'),(14,'Gabinete Master Supremo',10.00,'asd',1,'IMG_20200905_193552.jpg'),(15,'Gabinete Master Supremo',10.00,'qweqw',1,'IMG_20200905_193334.jpg'),(16,'Gabinete Master Supremo',10.00,'asd',1,'IMG_20200905_193050.jpg'),(17,'Gabinete Master Supremo',10.00,'qewq',1,'IMG_20200905_193255.jpg'),(18,'Gabinete Master Supremo',10.00,'asd',1,'IMG_20200905_193001.jpg'),(19,'Gabinete Master Supremo',123.00,'asd',1,'IMG_20200905_193050.jpg');
+INSERT INTO `tbl_produto` VALUES (1,'Gabinete Master Supremo',10.00,'asd',1,'b3ce584ce593cc8d09959685c40dcfd4.jpg'),(2,'asd',10.00,'asd',1,'97989_5_1534280226_g.jpg'),(3,'The Witcher',10.00,'teste ',1,'headphone-bluetooth-com-microfone-jbl-tune-500bt-photo780322340-12-7-33.jpg'),(4,'Lingerie',35.00,'Lingerie',1,'ac_gabineteGamer.jpeg'),(5,'Gabinete Master Supremo',10.00,'asd',1,'ac_mouse.jpeg'),(6,'Joguinho Kirby\'s',10.00,'asd',0,'ac_headset.jpeg'),(7,'asd',10.00,'asd',1,'headphone-bluetooth-com-microfone-jbl-tune-500bt-photo780322340-12-7-33.jpg'),(8,'Gabinete Master Supremo',10.00,'qwe',1,'97989_5_1534280226_g.jpg'),(9,'Gabinete Master Supremo',10.00,'asd',1,'b3ce584ce593cc8d09959685c40dcfd4.jpg'),(10,'Gabinete Master Supremo',10.00,'asd',1,'ac_gabineteGamer.jpeg'),(11,'Lingerie',35.00,'Lingerie',1,'98391_3_1537277080_g.jpg'),(12,'Gabinete Master Supremo',10.00,'asd',1,'97989_5_1534280226_g.jpg'),(13,'Gabinete Master Supremo',10.00,'asd',1,'458651.jpg'),(14,'Gabinete Master Supremo',10.00,'asd',1,'IMG_20200905_193552.jpg'),(15,'Gabinete Master Supremo',10.00,'qweqw',1,'IMG_20200905_193334.jpg'),(16,'Gabinete Master Supremo',10.00,'asd',1,'IMG_20200905_193050.jpg'),(17,'Gabinete Master Supremo',10.00,'qewq',1,'IMG_20200905_193255.jpg'),(18,'Gabinete Master Supremo',10.00,'asd',1,'IMG_20200905_193001.jpg'),(19,'Gabinete Master Supremo',123.00,'asd',1,'458651.jpg'),(20,'Gabinete Master Supremo',10.00,'asdas',1,'97989_5_1534280226_g.jpg'),(21,'Gabinete Master Supremo',10.00,'asds',1,'458651.jpg'),(22,'teste',123.00,'asdas qwe qw e qwe  qwe',1,'ac_gabineteGamer.jpeg');
 /*!40000 ALTER TABLE `tbl_produto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tbl_usuario`
+--
+
+DROP TABLE IF EXISTS `tbl_usuario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tbl_usuario` (
+  `id_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(200) DEFAULT NULL,
+  `email` varchar(200) DEFAULT NULL,
+  `senha` varchar(128) DEFAULT NULL,
+  `id_nivel` int(11) NOT NULL,
+  PRIMARY KEY (`id_usuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_usuario`
+--
+
+LOCK TABLES `tbl_usuario` WRITE;
+/*!40000 ALTER TABLE `tbl_usuario` DISABLE KEYS */;
+INSERT INTO `tbl_usuario` VALUES (1,'Rubens Victor','Rubensgmail','$2a$10$ScEg1/Yc.UdYnLGYaLmogua0TlJ5B3HLd0xrhEmCnwPZKTeVvxcB6',1),(2,'Roney Victor','Roney@gmail','$2a$10$53jQ65vM.JHgyNJYmbuIPeCojDZfTej5ayuv3z1LjsrCbxT28GhW.',1);
+/*!40000 ALTER TABLE `tbl_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -102,4 +129,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-18 15:13:06
+-- Dump completed on 2021-02-05 12:49:05
